@@ -1,6 +1,22 @@
 \chapter{Overview of Supervised Learning}
 
 \begin{ex}
+  We may assume without loss of generality that the elements of $\hat{y}$ are
+  ordered from largest to smallest. Thus, it suffices to show that
+  $\|t_1-\hat{y}\|\leq \|t_k-\hat{y}\|$, with equality if and only
+  if $\hat{y}_1=\hat{y}_k$. Note that
+  \begin{align*}
+    \|t_1-\hat{y}\|^2-\|t_k-\hat{y}\|^2
+     & =(1-\hat{y}_1)^2+\cdots+\hat{y}_k^2+\cdots+\hat{y}_n^2
+    -\left[\hat{y}_1^2+\cdots+(1-\hat{y}_k)^2+\cdots+\hat{y}_n^2\right] \\
+     & =(1-\hat{y}_1)^2-\hat{y}_1^2+\hat{y}_k^2-(1-\hat{y}_k)^2         \\
+     & =-2\hat{y}_1 + 1+2\hat{y}_k -1                                   \\
+     & =2(\hat{y}_k - \hat{y}_1)
+    \leq 0,
+  \end{align*}
+  with equality if and only if $\hat{y}_1=\hat{y}_k$. The result follows
+  by noting that the function $x\mapsto x^2$ is monotonic on the non-negative
+  reals.
 \end{ex}
 
 \begin{ex}
