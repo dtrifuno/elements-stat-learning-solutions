@@ -23,6 +23,32 @@
 \end{ex}
 
 \begin{ex}
+  Let $B^p$ be the $p$-dimensional unit ball centered at the origin. Let
+  $X_{1}, X_2, \ldots, X_N$ be i.i.d.\ samples from a uniform distribution
+  on $B^p$, and let their distances from the origin be denoted by
+  $D_1, D_2, \ldots, D_N$ respectively. Recall that the volume of a $p$-ball
+  of radius $r$ is
+  $$
+    \frac{\pi^{p/2}}{\Gamma(\frac{p}{2}+1)}r^p,
+  $$
+  and that therefore the fraction of volume at least $x$ away from the origin
+  is $x^p$. Hence, $F_D(x)=x^p$.
+
+  Let $D_{(1)}$ be the first order statistic of the distances, and note that
+  then
+  \begin{align*}
+    F_{D_{(1)}}(x)=\Pr\{\min\{D_1, D_2, \ldots, D_N \} \leq x\}
+    =1-F_{D_{(N)}}(x)
+    =1-\left[1-F_D(x)\right]^N
+    =1-\left[1-x^p\right]^N.
+  \end{align*}
+
+  It only remains to find the value of $x$ which corresponds to the median by
+  setting the CDF $F_{D_{(1)}}(x)$ equal to one half and solving for $x$, from
+  which it follows that
+  \begin{align*}
+    d(p,N)=\left(1-\left(\frac{1}{2}\right)^{1/N}\right)^{1/p}.
+  \end{align*}
 \end{ex}
 
 \begin{ex}
