@@ -1,0 +1,60 @@
+\documentclass[oneside]{memoir}
+% LTeX: enabled=false
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{ex}{Ex.}[chapter]
+
+\usepackage{xpatch}
+\makeatletter
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}
+\makeatother
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+
+\include{commands}
+
+\usepackage{minted}
+
+\setlrmarginsandblock{3cm}{2.5cm}{*}
+\setulmarginsandblock{2.5cm}{2.5cm}{*}
+\checkandfixthelayout
+
+\title{Unofficial Solution Guide to Friedman, Tibshirani and Hastie's \\ ``The Elements of Statistical Learning''}
+\author{Solutions by Darko Trifunovski}
+\date{November 21, 2021}
+% LTeX: enabled=true
+
+\begin{document}
+
+\frontmatter
+\begin{titlingpage}
+  \maketitle
+\end{titlingpage}
+\tableofcontents
+
+\mainmatter
+\setcounter{chapter}{1}
+\include{chapters/ch02}
+\include{chapters/ch03}
+\include{chapters/ch04}
+\include{chapters/ch05}
+\include{chapters/ch06}
+\include{chapters/ch07}
+\include{chapters/ch08}
+\include{chapters/ch09}
+\include{chapters/ch10}
+\include{chapters/ch11}
+\include{chapters/ch12}
+\include{chapters/ch13}
+\include{chapters/ch14}
+\include{chapters/ch15}
+\include{chapters/ch16}
+\include{chapters/ch17}
+
+\end{document}
